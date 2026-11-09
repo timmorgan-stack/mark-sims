@@ -39,7 +39,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .kicker { margin: 0 0 18px; color: var(--mute); }
 
-/* buttons */
+/* buttons (the last item of the main menu, Contact, is one too) */
 .btn { display: inline-flex; align-items: center; gap: 12px; padding: 15px 22px; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background-color .3s, color .3s, transform .4s var(--ease); }
 .btn-accent { background: var(--accent); color: var(--ink); }
 .btn-accent:hover { background: var(--ink); color: var(--accent); }
@@ -60,9 +60,9 @@ html.hdr-away .hdr { transform: translateY(-100%); }
 .nav a { position: relative; padding: 6px 0; }
 .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--ink); transform: scaleX(0); transform-origin: right; transition: transform .4s var(--ease); }
 .nav a:hover::after, .nav a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
-.nav a[href="/contact/"] { background: var(--accent); padding: 10px 16px; }
-.nav a[href="/contact/"]::after { display: none; }
-.nav a[href="/contact/"]:hover { background: var(--ink); color: var(--accent); }
+.nav a:last-child { background: var(--accent); padding: 10px 16px; }
+.nav a:last-child::after { display: none; }
+.nav a:last-child:hover { background: var(--ink); color: var(--accent); }
 .menu-btn { display: none; align-items: center; gap: 12px; position: relative; z-index: 2; }
 .menu-bars { width: 22px; height: 9px; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; transition: transform .4s var(--ease); }
 /* over the home page's opening picture, the logo is white */
@@ -276,7 +276,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   .nav { position: fixed; inset: 0; z-index: 1; flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; padding: var(--hdr) var(--m) 40px; background: var(--ink); color: #fff; font-size: clamp(40px, 11vw, 64px); letter-spacing: -.045em; font-weight: 800; visibility: hidden; clip-path: inset(0 0 100% 0); transition: clip-path .55s var(--ease), visibility 0s .55s; }
   .nav a { padding: 2px 0; }
   .nav a::after { background: var(--accent); }
-  .nav a[href="/contact/"] { background: none; padding: 2px 0; color: var(--accent); }
+  .nav a:last-child { background: none; padding: 2px 0; color: var(--accent); }
   html.menu-open .nav { visibility: visible; clip-path: inset(0 0 0 0); transition: clip-path .55s var(--ease); }
   html.menu-open .hdr { color: #fff; background: transparent; box-shadow: none; }
   html.menu-open .hdr .logo-ink { display: none; }
